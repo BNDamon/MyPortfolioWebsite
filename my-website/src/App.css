@@ -1,0 +1,365 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+body {
+  background-color: #FFFDD0; 
+  margin: 0; 
+  padding: 0; 
+}
+
+.centered-text {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  text-align: center; /* Center the text inside the element */
+}
+
+.damonpic {
+  display: block;
+  justify-content: top; /* Horizontally center */
+  align-items: top; /* Vertically center */
+  text-align: left; /* Center the text inside the element */
+  margin-left: -700px;
+  margin-top: -500px;
+  position: static;
+}
+
+.portfolio {
+  padding-top: 120px; /* Add space below the banner for content */
+}
+
+.name-text {
+  display: flex;
+  justify-content: flex-start; /* Align text to the left horizontally */
+  align-items: center; /* Vertically center the text within the container */
+  margin-top: -20px; /* Adjust top margin */
+  margin-left: -30px; /* Ensure no left margin so it aligns to the very left edge */
+  position: absolute; /* Position it relative to the viewport */
+  left: 100px; /* Align the text to the left of the screen */
+  top: 200px;
+  font-size: 30px;
+}
+
+.name-subtext {
+  display: flex;
+  justify-content: flex-start; /* Align text to the left horizontally */
+  align-items: center; /* Vertically center the text within the container */
+  margin-top: 0px; /* Adjust top margin */
+  margin-left: -20px; /* Ensure no left margin so it aligns to the very left edge */
+  position: absolute; /* Position it relative to the viewport */
+  left: 100px; /* Align the text to the left of the screen */
+  top: 350px;
+  font-size: 5px;
+}
+
+.tableofcontent {
+  display: flex;
+  justify-content: flex-start; /* Align text to the left horizontally */
+  align-items: center; /* Vertically center the text within the container */
+  margin-top: 20px; /* Adjust top margin */
+  margin-left: 1000px; /* Ensure no left margin so it aligns to the very left edge */
+  position: absolute; /* Position it relative to the viewport */
+  left: 0px; /* Align the text to the left of the screen */
+  top: 350px;
+  color:#ffffff;
+  font-family: "Poppins";
+  font-size: 10px;
+}
+
+.about-me {
+  display: flex;
+  justify-content: flex-start; /* Align text to the left horizontally */
+  align-items: center; /* Vertically center the text within the container */
+  margin-top: -160px; /* Adjust top margin */
+  margin-left: 1100px; /* Ensure no left margin so it aligns to the very left edge */
+  position: absolute; /* Position it relative to the viewport */
+  left: 0px; /* Align the text to the left of the screen */
+  top: 350px;
+  color:#FA003F;
+  font-size: 30px;
+}
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  background-color: #B3EBF2; /* Light background color */
+  color: #213547; /* Text color */
+  text-align: left; /* Align text to the left */
+  padding: 0 20px; /* Horizontal padding */
+  z-index: 1000; /* Ensure it stays on top */
+  display: flex; /* Flexbox to align items horizontally */
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Vertically center content */
+  height: 80px; /* Fixed height for the banner */
+  font-weight: bold; /* Make text bold */
+}
+
+.name-banner-text {
+  font-size: 23px;
+  margin-top: -2px;
+  margin-right: 20px; /* Space between the texts */
+}
+
+.banner-text {
+  margin-right: 20px; /* Space between the texts */
+}
+
+.banner-text:hover {
+  color: red; /* Change text color on hover */
+  transform: scale(1.1); /* Slightly enlarge the text */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+
+.logo-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex; /* Align logos horizontally */
+  justify-content: space-between; /* Space out the logos */
+  align-items: center; /* Vertically center logos if the container has more height */
+  z-index: 2000;
+  padding: 10px; /* Optional: add some padding around the container */
+  margin-top: -10px;
+}
+
+/* Logo images styling */
+.banner-img img {
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Optional: add a hover effect */
+}
+
+.banner-img img:hover {
+  transform: scale(1.2); /* Optional: slightly enlarge the logos on hover */
+}
+
+.card {
+  padding: 2em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  margin-top: 20px;
+}
+
+/* Fade-in animation for text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-delayed {
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 5s;
+  padding: 10px 20px;
+  font-size: 40px;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Typewriter effect */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #000;
+  padding-right: 0px;
+  width: 0;
+  animation: typing 1s steps(15) 1s forwards, blink 0.75s step-end;
+}
+
+.typewriter-delayed {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0px solid #000;
+  padding-right: 0px;
+  width: 0;
+  animation: typing 1s steps(15) 1s forwards, blink 1s step-end;
+  animation-delay: 2s;
+}
+
+.typewriter-delayed-delayed {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0px solid #000;
+  padding-right: 0px;
+  width: 0;
+  animation: typing 1s steps(15) 1s forwards, blink 1s step-end;
+  animation-delay: 4s;
+}
+
+.typewriter-wrapper {
+  text-align: left; /* Aligns child text to the left */
+  margin-left: 20px; /* Adjust this for horizontal spacing */
+  display: block;
+}
+
+@keyframes typing {
+  0% {
+    width: 0; 
+  }
+  100% {
+    width: 100%;
+    border-right: 0px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+}
+
+.aboutme-picture {
+  position:fixed;
+  top: 32%;
+  left: 5%;
+  margin-right: 100px; /* Add some spacing between the picture and the description */
+}
+
+.aboutme-bio{
+  position: fixed;
+  left: 35%;
+  top: 15%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.aboutme-descr{
+  position: fixed;
+  left: 35%;
+  top: 35%;
+  font-size: 15px;
+  color:#0056b3;
+  font-weight: bold;
+  font-family: "Poppins";
+}
+
+.contact-form-container {
+  position: absolute; /* Or relative if you want it to move within a parent container */
+  top: 50%; /* Move it 50% down from the top */
+  left: 50%; /* Move it 50% from the left */
+  transform: translate(-50%, -50%); /* Center the box relative to its top-left corner */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center-align the content horizontally */
+  width: 12%;
+  padding:55px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}                                  
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: -50px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, textarea {
+  width: 170%;
+  margin-left: -50px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 10px;
+}
+
+.submit-button {
+  margin-left: 20%;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.contactme-text{
+  display: flex;
+  position: fixed;
+  font-size: 50px;
+  justify-content: center;
+  font-family: 'Poppins';
+  font-weight: bold;
+  z-index: 200;
+  margin-top: -300px;
+  margin-left: -165px;
+}
+
+.project {
+  display: flex;               /* Align image and text horizontally */
+  align-items: center;         /* Center content vertically */
+  gap: 20px;                   /* Space between image and text */
+  background-color: white;     /* Keep background for visibility */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+  border-radius: 10px;         /* Round corners */
+  padding: 20px;               /* Add padding inside the box */
+  margin: 20px;                /* Add space between boxes */
+  width: 90%;                  /* Increase box width */
+  max-width: 1200px;           /* Prevent it from getting too wide */
+  height: 300px;               /* Increase box height */
+}
+
+/* Style for the project images */
+.project img {
+  width: 250px;                /* Set consistent image size */
+  height: auto;                /* Maintain aspect ratio */
+  border-radius: 10px;         /* Optional rounded corners for the image */
+}
+
+/* Style for project text */
+.project-text {
+  display: flex;
+  flex-direction: column;      /* Stack project title and description */
+  justify-content: center;     /* Center text vertically */
+}
+
+.project-text h3 {
+  font-size: 1.5rem;           /* Larger title font size */
+  margin: 0;                   /* Remove default margins */
+}
+
+.project-text p {
+  font-size: 1rem;             /* Adjust font size for the description */
+  margin: 10px 0 0;            /* Add some space after the title */
+}
+
